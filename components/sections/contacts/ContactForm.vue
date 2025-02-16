@@ -112,7 +112,6 @@ const onSuccess = async (values) => {
       method: "POST",
       body: emailJsParams
     })
-    console.log(response);
     $sonner.success("تم ارسال الرساله");
     resetForm()
   } catch (error) {
