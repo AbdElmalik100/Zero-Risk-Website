@@ -6,7 +6,7 @@
       </div>
       <div
         :class="activeMenu ? 'max-md:left-[0%]' : 'max-md:-left-[100%]'"
-        class="max-md:fixed max-md:flex-col max-md:items-start max-md:w-[250px] max-md:p-4 max-md:backdrop-blur-sm max-md:bg-white/40 max-md:shadow-lg max-md:top-0 max-md:h-screen transition-all ease-out duration-300 z-10 flex items-center justify-between w-full"
+        class="max-md:fixed max-md:flex-col max-md:items-start max-md:w-[250px] max-md:p-4 max-md:backdrop-blur-sm max-md:bg-white/40 max-md:shadow-lg max-md:top-0 max-md:h-screen transition-all ease-out duration-300 z-20 flex items-center justify-between w-full"
       >
         <button
           class="close md:hidden w-12 h-12 rounded-full text-white bg-primary-500 grid place-items-center"
