@@ -253,23 +253,19 @@ export const footer = {
   socials: [
     {
       icon: "ic:baseline-snapchat",
-      link: "https://www.snapchat.com",
+      link: "https://www.snapchat.com/add/zeroriskco.sa",
     },
     {
       icon: "ph:tiktok-logo-thin",
-      link: "https://www.tiktok.com",
-    },
-    {
-      icon: "arcticons:twitter-alt-2",
-      link: "https://www.twitter.com",
+      link: "https://www.tiktok.com/@zerorisksa",
     },
     {
       icon: "ph:instagram-logo-thin",
-      link: "https://www.instagram.com",
+      link: "https://www.instagram.com/zerorisksa",
     },
     {
       icon: "stash:social-whatsapp-light",
-      link: "https://www.whatsapp.com",
+      link: "https://wa.me/+966557774001",
     },
   ],
 };
