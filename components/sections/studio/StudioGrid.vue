@@ -35,7 +35,6 @@ const pagination = ref("1");
 const route = useRoute();
 const router = useRouter();
 
-console.log(studioGallery);
 
 const updatePagination = (page) => {
   pagination.value = page;
@@ -46,7 +45,7 @@ const updatePagination = (page) => {
 };
 
 onMounted(() => {
-  if (route.query) {
+  if (route.query.page) {
     pagination.value = route.query.page
   } else {
     router.push({

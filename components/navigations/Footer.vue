@@ -71,8 +71,8 @@ const links = [
   },
   {
     id: 5,
-    path: "/contact",
-    name: "contact",
+    path: "/contacts",
+    name: "contacts",
     arabicName: "تواصل معنا",
   },
 ];
