@@ -1,6 +1,6 @@
 <template>
   <section class="my-32">
-    <div class="container px-10">
+    <div class="container">
       <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
         <div
           class="image-wrapper rounded-xl aspect-square overflow-hidden border border-transparent hover:border-primary-500 transition-all ease-out hover:shadow-lg"

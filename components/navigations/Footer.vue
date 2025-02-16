@@ -1,6 +1,6 @@
 <template>
   <footer class="pt-10 pb-6 bg-primary-500 text-white">
-    <div class="container px-10 flex items-start gap-8 max-md:flex-col">
+    <div class="container flex items-start gap-12 max-md:flex-col">
       <div class="flex flex-col w-full max-md:text-center max-md:items-center">
         <div class="logo">
           <img src="/images/logo.svg" alt="Logo" />
@@ -9,7 +9,7 @@
           {{ footer.desc }}
         </p>
       </div>
-      <div class="flex flex-col md:items-center w-full">
+      <div class="flex flex-col items-center max-md:text-center w-full">
         <h2 class="font-bold text-lg mb-4">روابط سريعة</h2>
         <ul class="flex flex-col gap-4">
           <li v-for="link in links" :key="link.id">
@@ -19,8 +19,8 @@
           </li>
         </ul>
       </div>
-      <div class="flex flex-col gap-8 w-full">
-        <div class="contacts flex flex-col gap-4">
+      <div class="flex flex-col gap-8 w-full max-md:items-center">
+        <div class="contacts flex flex-col gap-4 max-md:items-center">
           <div
             class="flex items-center gap-3"
             v-for="(obj, key) in footer.contacts"

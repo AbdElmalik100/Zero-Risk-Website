@@ -1,6 +1,6 @@
 <template>
   <section class="my-32">
-    <div class="container px-10">
+    <div class="container">
       <div class="header text-center">
         <h2 class="text-3xl font-bold mb-4 text-navy-text">{{ gallery.title }}</h2>
         <div class="studio-gallery mt-10 grid gap-4 lg:grid-cols-3 md:grid-cols-2">

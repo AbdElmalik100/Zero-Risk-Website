@@ -1,6 +1,6 @@
 <template>
   <section class="py-20 bg-primary-soft">
-    <div class="container px-10 flex gap-4 max-md:gap-8 items-center max-md:flex-col">
+    <div class="container flex gap-4 max-md:gap-8 items-center max-md:flex-col">
       <div class="flex flex-col gap-4 w-full">
         <h2 class="font-bold text-navy-text text-2xl">
           {{ contacts.title }}

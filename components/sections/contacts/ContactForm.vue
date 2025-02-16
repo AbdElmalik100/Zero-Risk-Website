@@ -1,7 +1,7 @@
 <template>
   <section class="my-32">
-    <div class="container px-10">
-      <div class="p-10 max-md:px-6 border border-border-clr bg-box-clr rounded-xl flex lg:gap-12 gap-8  max-md:flex-col">
+    <div class="container">
+      <div class="p-10 max-md:px-4 border border-border-clr bg-box-clr rounded-xl flex lg:gap-12 gap-8  max-md:flex-col">
         <div class="flex flex-col gap-4 w-full">
           <h2 class="text-primary-500 font-bold text-3xl text-center mb-4">
             {{ contactsForm.title }}
@@ -57,12 +57,12 @@
           </p>
           <div class="mt-10 mb-8 flex flex-col gap-4">
             <div
-              class="flex items-center gap-3"
+              class="flex items-center gap-3 max-md:gap-2"
               v-for="(obj, key) in footer.contacts"
               :key="key"
             >
               <Icon :name="obj.icon" class="text-primary-500" size="1.5em" />
-              <NuxtLink :to="obj.link" target="_blank" class="hover:underline">
+              <NuxtLink :to="obj.link" target="_blank" class="flex-1 hover:underline max-md:text-xs">
                 {{ obj.title }}
               </NuxtLink>
             </div>

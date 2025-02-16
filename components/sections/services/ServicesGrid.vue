@@ -1,6 +1,6 @@
 <template>
   <section class="my-32">
-    <div class="container px-10">
+    <div class="container">
       <div class="flex flex-col gap-10 max-md:gap-20">
         <div
           class="flex items-center justify-between gap-10 max-md:flex-col"

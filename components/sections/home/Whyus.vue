@@ -1,6 +1,6 @@
 <template>
   <section class="my-32">
-    <div class="container px-10 flex gap-4 max-md:gap-8 max-md:flex-col">
+    <div class="container flex gap-4 max-md:gap-8 max-md:flex-col">
       <div class="flex flex-col gap-4 w-full max-md:text-center">
         <h2 class="font-bold text-xl text-navy-text">{{ whyus.title }}</h2>
         <p class="text-dark-text leading-8">{{ whyus.desc }}</p>

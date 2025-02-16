@@ -1,6 +1,6 @@
 <template>
   <header class="py-4 relative">
-    <div class="container px-10 flex items-center justify-between gap-8">
+    <div class="container flex items-center justify-between gap-8">
       <div class="logo">
         <img src="/images/logo.svg" alt="Logo" />
       </div>

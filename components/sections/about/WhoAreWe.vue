@@ -1,6 +1,6 @@
 <template>
   <section class="my-32">
-    <div class="container px-10 text-center">
+    <div class="container text-center">
       <h2 class="text-primary-500 font-bold text-3xl mb-8">
         {{ whoAreWe.title }}
       </h2>

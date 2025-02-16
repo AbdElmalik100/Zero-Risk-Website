@@ -1,6 +1,6 @@
 <template>
   <section class="py-32">
-    <div class="container px-10 flex items-start gap-4 max-md:flex-col-reverse max-md:gap-8">
+    <div class="container flex items-start gap-4 max-md:flex-col-reverse max-md:gap-8">
       <div class="flex flex-col gap-4 w-full">
         <div class="box" v-for="item in aboutObjectives.objectives" :key="item.id">
           <div class="flex items-center gap-4 mb-4">

@@ -1,6 +1,6 @@
 <template>
   <section class="py-32 my-32 bg-soft-gray">
-    <div class="container px-10 flex justify-center lg:gap-8 max-lg:gap-20 max-lg:flex-col ">
+    <div class="container flex justify-center lg:gap-8 max-lg:gap-20 max-lg:flex-col ">
       <div
         class="box relative p-8 border rounded-lg w-full bg-white"
         v-for="item in objectives"
