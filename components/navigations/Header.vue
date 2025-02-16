@@ -6,10 +6,10 @@
       </div>
       <div
         :class="activeMenu ? 'max-md:left-[0%]' : 'max-md:-left-[100%]'"
-        class="max-md:fixed max-md:flex-col max-md:items-start max-md:w-[250px] max-md:p-4 max-md:backdrop-blur-sm max-md:bg-white/40 max-md:shadow-lg max-md:top-0 max-md:h-full transition-all ease-out duration-300 z-20 flex items-center justify-between w-full"
+        class="max-md:fixed max-md:flex-col max-md:items-start max-md:w-[250px] max-md:p-4 max-md:backdrop-blur-sm max-md:bg-white/70 max-md:shadow-lg max-md:top-0 max-md:h-full transition-all ease-out duration-300 z-20 flex items-center justify-between w-full"
       >
         <button
-          class="close md:hidden w-12 h-12 rounded-full text-white bg-primary-500 grid place-items-center"
+          class="close md:hidden mt-3 w-12 h-12 rounded-full text-white bg-primary-500 grid place-items-center"
           @click="activeMenu = false"
         >
           <Icon name="icon-park-outline:close" size="1.2em" />
@@ -17,7 +17,7 @@
 
         <ul
           ref="menuRef"
-          class="nav-links flex items-center gap-8 max-lg:gap-4 max-md:flex-col max-md:items-start"
+          class="nav-links flex items-center gap-8 max-lg:gap-4 max-md:flex-col max-md:items-start max-md:text-xl"
         >
           <li v-for="link in links" :key="link.id">
             <NuxtLink
