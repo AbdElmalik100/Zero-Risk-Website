@@ -20,6 +20,18 @@ yarn install
 bun install
 ```
 
+## Engines
+
+Make sure that the installed node.js version on your machine is suitable.
+
+```bash
+# Node.js Version
+22.12.0
+
+# NPM Version
+10.9.0
+```
+
 ## Development Server
 
 Start the development server on `http://localhost:3000`:
