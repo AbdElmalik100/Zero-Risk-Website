@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  @apply box-border
+}
+
+body {
+  @apply font-noto bg-white italic text-base
+}
+
+button {
+  &:disabled {
+    @apply opacity-75
+  } 
+}
+
+.main-btn {
+  @apply px-8 py-3 grid place-items-center w-fit rounded-lg text-white text-center bg-primary-500 transition-all ease-out [&:not(:disabled)]:hover:bg-primary-400
+}
+.second-btn {
+  @apply px-8 py-3 grid place-items-center w-fit rounded-lg text-primary-500 text-center bg-white transition-all ease-out hover:text-black
+}
+
+input, select, textarea {
+  @apply outline-none border w-full bg-white rounded-lg p-3 px-5 transition-all ease-out duration-300 focus-within:border-primary-500
+}
