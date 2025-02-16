@@ -247,7 +247,7 @@ export const footer = {
     location: {
       icon: "octicon:location",
       title: "الرياض ، حى الحمراء ، مقابل الحمراء مول",
-      link: "https://www.google.com/maps/search/24.702633,+46.686886?coh=219680&utm_campaign=tt-rcs&entry=tts&g_ep=EgoyMDI1MDIxMi4wIPu8ASoASAFQAw%3D%3D",
+      link: "https://maps.app.goo.gl/BJhYVjk1tX93vZPKA",
     },
   },
   socials: [

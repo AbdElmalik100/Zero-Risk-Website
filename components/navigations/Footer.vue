@@ -27,7 +27,7 @@
             :key="key"
           >
             <Icon :name="obj.icon" size="1.5em" />
-            <NuxtLink :to="obj.link" target="_blank" class="hover:underline">
+            <NuxtLink :dir="key == 'phone' ? 'ltr' : 'rtl'" :to="obj.link" target="_blank" class="hover:underline">
               {{ obj.title }}
             </NuxtLink>
           </div>

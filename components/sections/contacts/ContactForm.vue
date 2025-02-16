@@ -23,7 +23,7 @@
               <input
                 type="text"
                 name="email"
-                placeholder="البريد الالكتروني"
+                placeholder="البريد الالكتروني (أختياري)"
                 v-model="email"
               />
               <span v-if="errors.email" class="text-rose-600 text-sm block mt-1">
@@ -33,7 +33,7 @@
             <div class="w-full">
               <textarea
                 name="message"
-                placeholder="أضف رسالتك"
+                placeholder="أضف رسالتك (أختياري)"
                 rows="5"
                 class="resize-none"
                 v-model="message"
@@ -62,7 +62,7 @@
               :key="key"
             >
               <Icon :name="obj.icon" class="text-primary-500" size="1.5em" />
-              <NuxtLink :to="obj.link" target="_blank" class="flex-1 hover:underline max-md:text-xs">
+              <NuxtLink :to="obj.link" :dir="key == 'phone' ? 'ltr' : 'rtl'" target="_blank" class="flex-1 ltr:text-end  hover:underline max-md:text-xs">
                 {{ obj.title }}
               </NuxtLink>
             </div>
@@ -88,11 +88,11 @@ const validationSchema = yup.object({
     .required("هذا الحقل لا يجب ان يكون فارغا")
     .min(8, "رقم الهاتف غير صحيح")
     .max(15, "رقم الهاتف غير صحيح"),
-  email: yup
-    .string()
-    .email("البريد الالكتروني غير صحيح")
-    .required("هذا الحقل لا يجب ان يكون فارغا"),
-  message: yup.string().required("هذا الحقل لا يجب ان يكون فارغا"),
+  // email: yup
+  //   .string()
+  //   .email("البريد الالكتروني غير صحيح")
+  //   .required("هذا الحقل لا يجب ان يكون فارغا"),
+  // message: yup.string().required("هذا الحقل لا يجب ان يكون فارغا"),
 });
 
 const { defineField, handleSubmit, errors, values, resetForm } = useForm({

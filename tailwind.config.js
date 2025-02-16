@@ -13,7 +13,7 @@ export default {
       },
     },
     fontFamily: {
-      noto: "Noto Sans",
+      noto: "Noto Sans Arabic",
     },
     extend: {
       colors: {

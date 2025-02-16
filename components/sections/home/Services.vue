@@ -8,7 +8,7 @@
         </p>
       </div>
       <div class="image-wrapper rounded-lg overflow-hidden my-10 max-md:h-[275px]">
-        <img :src="services.image" class="mx-auto object-cover h-full w-full" :alt="services.imageAlt" />
+        <img :src="services.image" class="mx-auto w-full h-full object-cover" :alt="services.imageAlt" />
       </div>
       <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-4 max-md:gap-8 mt-10">
         <div
