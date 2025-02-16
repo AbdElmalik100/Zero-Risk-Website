@@ -1,7 +1,8 @@
 <template>
   <section class="my-32">
     <div class="container">
-      <div class="p-10 max-md:px-4 border border-border-clr bg-box-clr rounded-xl flex lg:gap-12 gap-8  max-md:flex-col">
+      <div
+        class="p-10 max-md:px-4 border border-border-clr bg-box-clr rounded-xl flex lg:gap-12 gap-8  max-md:flex-col">
         <div class="flex flex-col gap-4 w-full">
           <h2 class="text-primary-500 font-bold text-3xl text-center mb-4">
             {{ contactsForm.title }}
@@ -20,30 +21,21 @@
               </span>
             </div>
             <div class="w-full">
-              <input
-                type="text"
-                name="email"
-                placeholder="البريد الالكتروني (أختياري)"
-                v-model="email"
-              />
+              <input type="text" name="email" placeholder="البريد الالكتروني (أختياري)" v-model="email" />
               <span v-if="errors.email" class="text-rose-600 text-sm block mt-1">
                 {{ errors.email }}
               </span>
             </div>
             <div class="w-full">
-              <textarea
-                name="message"
-                placeholder="أضف رسالتك (أختياري)"
-                rows="5"
-                class="resize-none"
-                v-model="message"
-              ></textarea>
+              <textarea name="message" placeholder="أضف رسالتك (أختياري)" rows="5" class="resize-none"
+                v-model="message"></textarea>
               <span v-if="errors.message" class="text-rose-600 text-sm block mt-1">
                 {{ errors.message }}
               </span>
             </div>
             <button class="main-btn !w-full" :disabled="loading">
-              <span v-if="loading" class="spinner w-6 h-6 block border-2 border-white rounded-full border-r-transparent animate-spin"></span>
+              <span v-if="loading"
+                class="spinner w-6 h-6 block border-2 border-white rounded-full border-r-transparent animate-spin"></span>
               <span v-else>أرسال</span>
             </button>
           </form>
@@ -56,13 +48,10 @@
             {{ contactsForm.desc }}
           </p>
           <div class="mt-10 mb-8 flex flex-col gap-4">
-            <div
-              class="flex items-center gap-3 max-md:gap-2"
-              v-for="(obj, key) in footer.contacts"
-              :key="key"
-            >
+            <div class="flex items-center gap-3 max-md:gap-2" v-for="(obj, key) in footer.contacts" :key="key">
               <Icon :name="obj.icon" class="text-primary-500" size="1.5em" />
-              <NuxtLink :to="obj.link" :dir="key == 'phone' ? 'ltr' : 'rtl'" target="_blank" class="flex-1 ltr:text-end  hover:underline max-md:text-xs">
+              <NuxtLink :to="obj.link" :dir="key == 'phone' ? 'ltr' : 'rtl'" target="_blank"
+                class="flex-1 ltr:text-end  hover:underline max-md:text-xs">
                 {{ obj.title }}
               </NuxtLink>
             </div>
@@ -78,8 +67,12 @@
 import { contactsForm, footer } from "~/data/data";
 import * as yup from "yup";
 import { useForm } from "vee-validate";
+import { Footer } from "#components";
 
-const {$sonner} = useNuxtApp()
+
+const config = useRuntimeConfig()
+const { $sonner } = useNuxtApp()
+
 const loading = ref(false);
 const validationSchema = yup.object({
   name: yup.string().required("هذا الحقل لا يجب ان يكون فارغا"),
@@ -99,13 +92,35 @@ const { defineField, handleSubmit, errors, values, resetForm } = useForm({
   validationSchema,
 });
 
-const onSuccess = (values) => {
+
+
+
+const onSuccess = async (values) => {
   loading.value = true
-  setTimeout(() => {
-    loading.value = false
+  const emailJsParams = {
+    service_id: config.public.EMAILJS_SERVICE_ID,
+    template_id: config.public.EMAILJS_TEMPLATE_ID,
+    user_id: config.public.EMAILJS_PUBLIC_KEY,
+    template_params: {
+      from_email: "paydaychains200gmail.com",
+      to_name: "Zero Risk",
+      ...values
+    }
+  }
+  try {
+    const response = await $fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: "POST",
+      body: emailJsParams
+    })
+    console.log(response);
     $sonner.success("تم ارسال الرساله");
     resetForm()
-  }, 2000)
+  } catch (error) {
+    console.log(error);
+    $sonner.error("حدث خطأ في الارسال, حاول مره اخري لاحقا.");
+  } finally {
+    loading.value = false
+  }
 };
 
 const onSubmit = handleSubmit(onSuccess);
