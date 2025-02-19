@@ -45,7 +45,7 @@ export const services = {
     {
       id: 3,
       image: "/images/service 3.png",
-      title: "الستائر",
+      title: "أعمال الستائر",
       desc: "تصميم وتنفيذ أحدث الستائر العصرية بأناقة وإبداع"
     },
     {
